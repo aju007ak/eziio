@@ -1,16 +1,16 @@
-def toString(List): 
+import sys, string, math, itertools
 
-def permute(a,b,c): 
-    if b==c: 
-        print toString(a) 
-    else: 
-        for i in xrange(b,c+1): 
-            a[b], a[i] = a[i], a[l] 
-            permute(a, b+1,c) 
-            a[l], a[i] = a[i], a[b]
-  
-
-string = "ABC"
-n = len(string) 
-a = list(string) 
-permute(a, 0, n-1) 
+# Get all permutations of [1, 2, 3]
+s = input()
+L = list(itertools.permutations(s))
+L2 = []
+for i in range(0,len(L)) :
+    s2 = ''.join(list(L[i]))
+    L2.append(s2)
+L2.sort()
+L3 = [L2[0]]
+for i in range(0,len(L2)-1) :
+    if L2[i] != L2[i+1] :
+        L3.append(L2[i+1])
+for i in range(0,len(L3)) :
+    print(L3[i])
