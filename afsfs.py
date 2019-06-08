@@ -1,5 +1,5 @@
 import sys, string, math
-n = int(input())
+a = int(input())
 L = list(map(int,input().split()))
 L2 = sorted(L)
 k = len(L)
