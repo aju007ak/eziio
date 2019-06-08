@@ -1,4 +1,4 @@
 import sys
-n = int(input('enter a no : '))
+n = int(input('odd '))
 if n%2==0 :  print('Even')
 else : print('Odd')
